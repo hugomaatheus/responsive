@@ -1,0 +1,90 @@
+/* Mobile design */
+%margin
+    margin: 50px 0
+
+body
+    margin: 0
+    font-family: 'Open Sans', sans-serif
+
+div
+    box-shadow: 0 0 1px rgba(0,0,0,0.5)
+
+.flex
+    display: flex
+
+header
+    .logo
+        margin-left: 600px
+        display: inline-block
+
+#pesquisa
+    @extend %margin
+    margin-left: 360px
+
+
+/* Desktop design */
+@media screen and (min-width: 1000px) 
+    .nav-item
+        border: solid 1px black
+
+    .flex-end-nav
+        margin-left: 580px
+
+    #my-h5
+        margin-left: 20px
+
+    #end-nav
+        flex-direction: row
+        justify-content: space-around
+
+    #ultima-hora
+        border: solid 1px black
+        margin-left: 30px
+        
+    #main-card
+        width: 500px
+        height: 150px 
+        padding: 50px
+        margin-top: 20px
+        margin-left: 20px
+        border: solid 1px black
+        img
+            display: block
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: auto
+            margin-right: auto
+            width: 50%
+        .tit
+            margin-top: auto
+            margin-bottom: auto
+
+    .noticias-flex
+        display: flex
+        margin-top: 10px
+        margin-left: 20px
+        border: solid 1px black
+
+    .card
+        border: solid 1px black        
+        margin-right: 15px
+        img
+            display: block
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: auto
+            margin-right: auto
+            width: 250px
+            height: 150px
+
+    .button-flex
+        display: flex
+        justify-content: space-around
+    
+    .link-flex
+        display: flex
+        justify-content: space-around
+
+        
+        
+    
