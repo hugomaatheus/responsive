@@ -1,6 +1,6 @@
 /* Mobile design */
-#pesquisa {
-  margin: 50px 0; }
+div.page #pesquisa {
+  margin: 30px 0; }
 
 body {
   margin: 0;
@@ -12,72 +12,167 @@ div {
 .flex {
   display: flex; }
 
-header .logo {
-  margin-left: 600px;
-  display: inline-block; }
+div.page {
+  margin: 0 auto;
+  padding: 0 10px; }
+  div.page header .logo {
+    width: 150px;
+    display: inline-block; }
+  div.page header .content-header .h-flex {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    border-radius: 5px; }
+    div.page header .content-header .h-flex .socials-flex {
+      display: flex;
+      justify-content: space-around; }
+  div.page header .nav-flex {
+    display: none; }
+  div.page #pesquisa input:first-child {
+    width: 80%; }
+  div.page #pesquisa .search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold; }
+  div.page main .noticias-section, div.page main .colunas-flex {
+    display: flex;
+    flex-direction: column; }
+    div.page main .noticias-section .noticias-flex, div.page main .colunas-flex .noticias-flex {
+      display: flex;
+      flex-direction: column; }
+    div.page main .noticias-section .card, div.page main .noticias-section .main-card, div.page main .colunas-flex .card, div.page main .colunas-flex .main-card {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      border: solid 1px black;
+      border-radius: 5px; }
+      div.page main .noticias-section .card img, div.page main .noticias-section .main-card img, div.page main .colunas-flex .card img, div.page main .colunas-flex .main-card img {
+        max-width: 70%;
+        margin: auto; }
+      div.page main .noticias-section .card .tit, div.page main .noticias-section .main-card .tit, div.page main .colunas-flex .card .tit, div.page main .colunas-flex .main-card .tit {
+        padding-left: 15px; }
+  div.page main .colunas-flex .card {
+    border: solid 1px black;
+    border-radius: 5px; }
+  div.page main #ultima-hora {
+    border: solid 1px black;
+    border-radius: 5px; }
+    div.page main #ultima-hora a {
+      font-size: 20px;
+      font-weight: bold;
+      color: black; }
+  div.page main .buttons-flex {
+    display: flex;
+    justify-content: space-around; }
+    div.page main .buttons-flex .tag-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold; }
 
-#pesquisa {
-  margin-left: 360px; }
-
-/* Desktop design */
-@media screen and (min-width: 1000px) {
-  .nav-item {
-    border: solid 1px black; }
-
-  .flex-end-nav {
-    margin-left: 580px; }
-
-  #my-h5 {
-    margin-left: 20px; }
-
-  #end-nav {
+footer {
+  border: solid 1px black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; }
+  footer .footer1 {
+    display: flex;
+    text-align: center;
+    flex-direction: column; }
+  footer .footer2 {
+    display: flex;
     flex-direction: row;
     justify-content: space-around; }
 
-  #ultima-hora {
-    border: solid 1px black;
-    margin-left: 30px; }
+/*Tablet design */
+@media screen and (min-width: 720px) and (max-width: 1199px) {
+  body .page {
+    width: 768px; }
+    body .page main .noticias-section article img, body .page main .colunas-flex article img {
+      border-radius: 200px; }
+    body .page main .colunas-flex article img {
+      width: 50%; } }
+/* Desktop design */
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-left: 550px;
+    display: inline-block; }
 
-  #main-card {
-    width: 500px;
-    height: 150px;
-    padding: 50px;
-    margin-top: 20px;
-    margin-left: 20px;
-    border: solid 1px black; }
-    #main-card img {
-      display: block;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%; }
-    #main-card .tit {
+  body .page {
+    width: 1200px; }
+    body .page #pesquisa input:first-child {
+      width: 20%; }
+    body .page .content-header .h-flex {
+      display: flex;
+      flex-direction: column;
+      border: solid 1px black;
+      border-radius: 5px;
+      margin-top: 10px; }
+    body .page .content-header .socials-flex {
+      display: flex;
+      justify-content: space-around; }
+    body .page .content-header .end-nav {
+      margin-left: auto; }
+    body .page .content-header .nav-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+    body .page main .noticias-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      body .page main .noticias-section .noticias-flex {
+        display: flex;
+        flex-direction: row; }
+      body .page main .noticias-section .main-card {
+        flex-direction: row;
+        width: 500px;
+        height: 150px;
+        padding: 50px;
+        margin-top: 20px;
+        margin-left: 20px; }
+        body .page main .noticias-section .main-card img {
+          display: block;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%; }
+    body .page main #ultima-hora {
+      margin-left: 10px; }
+    body .page main .colunas-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+    body .page main .card {
+      margin-right: 15px; }
+      body .page main .card img {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        height: 150px; }
+    body .page main .tit {
       margin-top: auto;
       margin-bottom: auto; }
 
-  .noticias-flex {
+  footer.footer {
     display: flex;
-    margin-top: 10px;
-    margin-left: 20px;
-    border: solid 1px black; }
-
-  .card {
-    border: solid 1px black;
-    margin-right: 15px; }
-    .card img {
-      display: block;
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: auto;
-      margin-right: auto;
-      width: 250px;
-      height: 150px; }
-
-  .button-flex {
-    display: flex;
-    justify-content: space-around; }
-
-  .link-flex {
-    display: flex;
-    justify-content: space-around; } }
+    flex-direction: column;
+    margin-bottom: 10px; }
+    footer.footer .footer1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+    footer.footer .footer2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }

@@ -1,6 +1,6 @@
 /* Mobile design */
 %margin
-    margin: 50px 0
+    margin: 30px 0
 
 body
     margin: 0
@@ -12,78 +12,207 @@ div
 .flex
     display: flex
 
-header
-    .logo
-        margin-left: 600px
-        display: inline-block
+div.page
+    margin: 0 auto
+    padding: 0 10px
 
-#pesquisa
-    @extend %margin
-    margin-left: 360px
+    header
+        .logo
+            width: 150px
+            display: inline-block
+        .content-header       
+            .h-flex
+                display: flex
+                flex-direction: column
+                border: solid 1px black
+                border-radius: 5px
+                .socials-flex
+                    display: flex
+                    justify-content: space-around
 
+        .nav-flex
+            display: none
+        
 
-/* Desktop design */
-@media screen and (min-width: 1000px) 
-    .nav-item
-        border: solid 1px black
+    #pesquisa
+        @extend %margin
+        input:first-child
+            width: 80%
+        .search-button
+            background-color: #4CAF50
+            color: white
+            border: none
+            text-align: center              
+            font-size: 13px
+            font-weight: bold
 
-    .flex-end-nav
-        margin-left: 580px
+    main
+        .noticias-section, .colunas-flex
+            display: flex
+            flex-direction: column
+            .noticias-flex
+                display: flex
+                flex-direction: column
+                
+            .card, .main-card
+                display: flex
+                flex-direction: column
+                margin-bottom: 15px
+                border: solid 1px black
+                border-radius: 5px
+                img
+                    max-width: 70%
+                    margin: auto
+                .tit
+                    padding-left: 15px
+                    
+        .colunas-flex
+            .card
+                border: solid 1px black
+                border-radius: 5px
 
-    #my-h5
-        margin-left: 20px
+        #ultima-hora
+            border: solid 1px black
+            border-radius: 5px
+            a
+                font-size: 20px
+                font-weight: bold
+                color: black
+        
+        .buttons-flex
+            display: flex
+            justify-content: space-around
+            .tag-button
+                background-color: #4CAF50
+                color: white
+                border: none
+                padding: 10px
+                text-align: center              
+                font-size: 13px
+                font-weight: bold
 
-    #end-nav
+footer
+    border: solid 1px black
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    .footer1
+        display: flex
+        text-align: center 
+        flex-direction: column
+    .footer2
+        display: flex
         flex-direction: row
         justify-content: space-around
 
-    #ultima-hora
-        border: solid 1px black
-        margin-left: 30px
-        
-    #main-card
-        width: 500px
-        height: 150px 
-        padding: 50px
-        margin-top: 20px
-        margin-left: 20px
-        border: solid 1px black
-        img
-            display: block
-            margin-top: auto
-            margin-bottom: auto
-            margin-left: auto
-            margin-right: auto
-            width: 50%
-        .tit
-            margin-top: auto
-            margin-bottom: auto
 
-    .noticias-flex
-        display: flex
-        margin-top: 10px
-        margin-left: 20px
-        border: solid 1px black
+/*Tablet design */
+@media screen and (min-width: 720px) and (max-width: 1199px)
+    body
+        .page
+            width: 768px    
 
-    .card
-        border: solid 1px black        
-        margin-right: 15px
-        img
-            display: block
-            margin-top: auto
-            margin-bottom: auto
-            margin-left: auto
-            margin-right: auto
-            width: 250px
-            height: 150px
+            main
+                .noticias-section, .colunas-flex
+                    article
+                        img
+                            border-radius: 200px
+                .colunas-flex
+                    article
+                        img
+                            width: 50%
 
-    .button-flex
-        display: flex
-        justify-content: space-around
+
+/* Desktop design */
+@media screen and (min-width: 1200px)
+    .logo
+        margin-left: 550px
+        display: inline-block    
+
+    body
+        .page
+            width: 1200px 
+            #pesquisa
+                input:first-child
+                    width: 20%
+            .content-header 
+                .h-flex
+                    display: flex
+                    flex-direction: column
+                    border: solid 1px black
+                    border-radius: 5px
+                    margin-top: 10px
+                .socials-flex
+                    display: flex
+                    justify-content: space-around           
+                .end-nav
+                    margin-left: auto
+                .nav-flex
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+
+            main
+                .noticias-section  
+                    display: flex              
+                    flex-direction: row
+                    justify-content: space-between
+                    .noticias-flex
+                        display: flex
+                        flex-direction: row
+                    .main-card    
+                        flex-direction: row                
+                        width: 500px
+                        height: 150px 
+                        padding: 50px
+                        margin-top: 20px
+                        margin-left: 20px 
+                        img
+                            display: block
+                            margin-top: auto
+                            margin-bottom: auto
+                            margin-left: auto
+                            margin-right: auto
+                            width: 50%                                             
+                
+                #ultima-hora                    
+                    margin-left: 10px
+                
+                .colunas-flex
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+                .card
+                    margin-right: 15px
+                    img
+                        display: block
+                        margin-top: auto
+                        margin-bottom: auto
+                        margin-left: auto
+                        margin-right: auto
+                        width: 150px
+                        height: 150px
+                .tit
+                    margin-top: auto
+                    margin-bottom: auto
     
-    .link-flex
+    footer.footer        
         display: flex
-        justify-content: space-around
+        flex-direction: column
+        margin-bottom: 10px
+        .footer1
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+        .footer2
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+
+                
+                
+
+
 
         
         
